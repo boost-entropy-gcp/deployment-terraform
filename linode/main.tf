@@ -33,8 +33,3 @@ resource "linode_instance" "terraform_instance" {
   depends_on = [linode_sshkey.key]
 }
 
-resource "linode_instance_ip" "terraform_instance" {
-  linode_id = linode_instance.terraform_instance.id
-  public    = true
-}
-

@@ -1,5 +1,5 @@
 output "ip" {
-  value = linode_instance_ip.terraform_instance.address
+  value = linode_instance.terraform_instance.ip_address
 }
 
 output "private_key" {
