@@ -1,0 +1,6 @@
+# Terraform files
+.terraform*
+id_rsa
+ip_address.txt
+
+linode/terraform.tfvars
