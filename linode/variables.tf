@@ -6,6 +6,10 @@ variable "linode_api_token" {
   type = string
 }
 
+variable "root_pass" {
+  type = string
+}
+
 variable "label" {
   default = "terraform-instance"
 }

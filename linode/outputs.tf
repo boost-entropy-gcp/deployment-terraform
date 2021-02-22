@@ -1,5 +1,5 @@
 output "ip" {
-  value = aws_lightsail_static_ip.static_ip.ip_address
+  value = linode_instance_ip.terraform_instance.address
 }
 
 output "private_key" {
