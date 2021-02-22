@@ -10,7 +10,7 @@ terraform {
     organization = "LVTechnologies"
 
     workspaces {
-      name = "github-actions"
+      name = "github-actions-linode"
     }
   }
 }
