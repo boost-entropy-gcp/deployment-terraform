@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "linode_api_token" {
-  type    = string
+  type = string
 }
 
 variable "label" {
