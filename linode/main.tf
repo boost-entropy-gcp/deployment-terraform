@@ -13,7 +13,7 @@ provider "template" {}
 provider "tls" {}
 
 provider "linode" {
-  token = var.token
+  token = var.linode_api_token
 }
 
 resource "linode_instance" "terraform_instance" {

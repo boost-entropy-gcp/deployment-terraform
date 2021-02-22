@@ -2,7 +2,7 @@ variable "region" {
   default = "us-east"
 }
 
-variable "token" {
+variable "linode_api_token" {
   type    = string
 }
 
