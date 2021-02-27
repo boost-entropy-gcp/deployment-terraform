@@ -1,4 +1,6 @@
 #!/bin/bash
+# <UDF name="username" label="Username of new user in system" example="ubuntu"
+# default="user">
 
 if [[ -z "$1" ]]; then
 	echo "Not username provided, using user"
