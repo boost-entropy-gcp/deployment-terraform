@@ -30,6 +30,10 @@ resource "linode_instance" "terraform_instance" {
   authorized_keys = [linode_sshkey.key.ssh_key]
   root_pass       = var.root_pass
 
+  stackscript_id = linode_stackscript.add_user.id
+  stackscript_data = {
+    "username" = var.username
+  }
   depends_on = [linode_sshkey.key]
 }
 

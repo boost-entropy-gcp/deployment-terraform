@@ -11,7 +11,7 @@ variable "root_pass" {
 }
 
 variable "username" {
-  type = string
+  type    = string
   default = "user"
 }
 
