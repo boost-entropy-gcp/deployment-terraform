@@ -1,6 +1,6 @@
 # Deploying in Linode.
 
-An important guide about this process is (A Beginner's Guide to Terraform)[https://www.linode.com/docs/guides/beginners-guide-to-terraform/]
+An important guide about this process is [ A Beginner's Guide to Terraform ](https://www.linode.com/docs/guides/beginners-guide-to-terraform/)
 
 To deploy in Linode you should have an API Key. To get this API key you should
 get from the panel control from Linode.
