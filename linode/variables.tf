@@ -10,6 +10,11 @@ variable "root_pass" {
   type = string
 }
 
+variable "username" {
+  type = string
+  default = "user"
+}
+
 variable "label" {
   default = "terraform-instance"
 }
