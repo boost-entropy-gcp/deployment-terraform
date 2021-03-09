@@ -57,7 +57,13 @@ Unfortunately, for the terraform cloud backend, this is not enough as you should
 an environment variable with this information.
 For this you could perform the following.
 
-1. Create an environment variable in the terraform cloud configuration with the
+1. Delete the new line caracters in json file. There is two approaches in
+   [this response](https://stackoverflow.com/questions/1251999/how-can-i-replace-a-newline-n-using-sed). Here using the `tr` command:
+```bash
+tr '\n' ' ' < key.json | xclip -selection clipboard
+```
+
+2. Create an environment variable in the terraform cloud configuration with the
 	 name `GOOGLE_CREDENTIALS`
 2. Copy the contents of the JSON file in this
 	 variable.
