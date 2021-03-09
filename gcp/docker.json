@@ -1,0 +1,26 @@
+{
+  "variables": {
+        "gcloud_account_json": "telemonitoreosignosvitales-5c758a0f4185.json",
+        "gcloud_project_id": "telemonitoreosignosvitales"
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "{{user `gcloud_account_json`}}",
+      "project_id": "{{user `gcloud_project_id`}}",
+      "ssh_username":"ubuntu",
+      "source_image_family": "ubuntu-1804-lts",
+      "image_name": "docker-{{timestamp}}",
+      "zone": "us-central1-a",
+      "machine_type":"e2-small",
+      "disk_size": "20",
+      "image_family":"docker"
+    }
+  ],
+  "provisioners": [
+      {
+           "type": "shell",
+           "script": "./install-docker.sh"
+      }
+  ]
+}
