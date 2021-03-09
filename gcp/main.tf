@@ -14,12 +14,9 @@ terraform {
   }
 }
 
-provider "template" {}
 provider "tls" {}
 
 provider "google" {
-
-  credentials = file(var.credentials_file)
 
   project = var.project
   region  = var.region
@@ -91,7 +88,7 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   metadata {
-    sshKeys = "${var.gcp_ssh_user}:${gcp_sshkey.key.ssh_key}"
+    sshKeys = "${var.gcp_ssh_user}:${chomp(tls_private_key.key.public_key_openssh)}"
   }
 
   depends_on = [gcp_sshkey.key]
