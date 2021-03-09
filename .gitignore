@@ -5,3 +5,4 @@ ip_address.txt
 
 linode/terraform.tfvars
 gcp/terraform.tfvars
+gcp/key.json
