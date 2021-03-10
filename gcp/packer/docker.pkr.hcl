@@ -16,7 +16,7 @@ source "googlecompute" "packer" {
   image_name          = "docker-${local.timestamp}"
   machine_type        = "e2-small"
   project_id          = "${var.gcloud_project_id}"
-  source_image_family = "ubuntu-1804-lts"
+  source_image_family = "ubuntu-2004-lts"
   ssh_username        = "ubuntu"
   zone                = "us-central1-a"
 }
