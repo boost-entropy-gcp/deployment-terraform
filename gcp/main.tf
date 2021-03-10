@@ -41,6 +41,11 @@ resource "google_compute_firewall" "vpc-firewall-out" {
     ports    = ["80", "8080", "9090", "6443", "22", "443", "50000", "1883"]
   }
 
+  allow {
+    protocol = "udp"
+    ports    = ["1700"]
+  }
+
   source_ranges = ["0.0.0.0/0"]
 }
 
