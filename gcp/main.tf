@@ -87,11 +87,12 @@ resource "google_compute_instance" "vm_instance" {
       nat_ip = google_compute_address.vm_static_ip.address
     }
   }
-  metadata {
+
+  metadata = {
     sshKeys = "${var.gcp_ssh_user}:${chomp(tls_private_key.key.public_key_openssh)}"
   }
 
-  depends_on = [gcp_sshkey.key]
+  depends_on = [tls_private_key.key]
 }
 
 
