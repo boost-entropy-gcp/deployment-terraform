@@ -2,6 +2,7 @@
 .terraform*
 id_rsa
 ip_address.txt
+*.pkrvars.hcl
 
 linode/terraform.tfvars
 gcp/terraform.tfvars
